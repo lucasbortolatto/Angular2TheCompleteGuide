@@ -4,6 +4,7 @@ import { Component } from '@angular/core';
   selector: 'app-root',
   template: `
       <h1>Inline Template</h1>
+      <firstapp-other></firstapp-other>
   `,
   styles: [`
     h1 {
