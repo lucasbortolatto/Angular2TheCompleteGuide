@@ -5,6 +5,7 @@ import { Component } from '@angular/core';
   template: `
       <h1>Inline Template</h1>
       <firstapp-other></firstapp-other>
+      <firstapp-another></firstapp-another>
   `,
   styles: [`
     h1 {
