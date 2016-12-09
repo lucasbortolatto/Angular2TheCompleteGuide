@@ -5,7 +5,12 @@ import { Component } from '@angular/core';
   template: `
       <h1>Inline Template</h1>
       <firstapp-other></firstapp-other>
-      <firstapp-another></firstapp-another>
+      <firstapp-another>
+        <div>
+            <h2>Hello</h2>
+            <p>World</p>
+        </div>
+      </firstapp-another>
   `,
   styles: [`
     h1 {
