@@ -5,11 +5,15 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
 import { DatabindingComponent } from './databinding/databinding.component';
+import { PropertyBindingComponent } from './property-binding.component';
+import { EventyBindingComponent } from './eventy-binding.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    DatabindingComponent
+    DatabindingComponent,
+    PropertyBindingComponent,
+    EventyBindingComponent
   ],
   imports: [
     BrowserModule,
