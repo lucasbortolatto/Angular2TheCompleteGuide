@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { DatabindingComponent } from './databinding/databinding.component';
 import { PropertyBindingComponent } from './property-binding.component';
 import { EventyBindingComponent } from './eventy-binding.component';
+import { ToWayBindingComponent } from './to-way-binding.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     DatabindingComponent,
     PropertyBindingComponent,
-    EventyBindingComponent
+    EventyBindingComponent,
+    ToWayBindingComponent
   ],
   imports: [
     BrowserModule,
