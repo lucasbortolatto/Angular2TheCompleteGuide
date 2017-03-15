@@ -1,4 +1,5 @@
 import { Component } from "@angular/core";
+import { Subscription } from 'rxjs/Rx';
 import { AuthService } from './auth.service';
 
 @Component({
@@ -28,13 +29,24 @@ import { AuthService } from './auth.service';
     `
 })
 export class HeaderComponent {
-    constructor(private authService: AuthService){}
+    isAuthenticated = false;
+    private subscription: Subscription;
+
+    constructor(private authService: AuthService){
+        this.subscription = this.authService.isAuthenticated().subscribe(
+            authStatus => this.isAuthenticated = authStatus
+        );
+    }
 
     isAuth() {
-        return this.authService.isAuthenticated();
+        return this.isAuthenticated;
     }
 
     onLogout() {
         this.authService.logout();
+    }
+
+    ngOnDestroy() {
+        this.subscription.unsubscribe();
     }
 }
