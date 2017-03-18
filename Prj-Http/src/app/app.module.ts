@@ -4,7 +4,6 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { RecipeBookAppComponent } from "./recipe-book.component";
 import { HeaderComponent } from "./header.component";
-import { DropdownDirective } from "./dropdown.directive";
 import { RecipesComponent } from "./recipes/recipes.component";
 import { RecipeListComponent } from "./recipes/recipe-list/recipe-list.component";
 import { RecipeDetailComponent } from "./recipes/recipe-detail/recipe-detail.component";
@@ -14,19 +13,18 @@ import { RecipeStartComponent } from "./recipes/recipe-start.component";
 import { ShoppingListService } from "./shopping-list/shopping-list.service";
 import { RecipeService } from "./recipes/recipe.service";
 import { routing } from "./app.routing";
-import { HomeComponent } from './home.component';
+import { CoreModule } from './core.module';
 
 @NgModule({
   declarations: [
     RecipeBookAppComponent,
     HeaderComponent,
-    DropdownDirective,
-    HomeComponent
   ],
   imports: [
     BrowserModule,
     HttpModule,
     routing,
+    CoreModule
   ],
   providers: [ShoppingListService, RecipeService],
   bootstrap: [RecipeBookAppComponent]
