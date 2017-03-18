@@ -14,7 +14,6 @@ import { RecipeStartComponent } from "./recipes/recipe-start.component";
 import { ShoppingListService } from "./shopping-list/shopping-list.service";
 import { RecipeService } from "./recipes/recipe.service";
 import { routing } from "./app.routing";
-import { ShoppingListModule } from './shopping-list/shopping-list.module';
 import { HomeComponent } from './home.component';
 
 @NgModule({
@@ -28,7 +27,6 @@ import { HomeComponent } from './home.component';
     BrowserModule,
     HttpModule,
     routing,
-    ShoppingListModule
   ],
   providers: [ShoppingListService, RecipeService],
   bootstrap: [RecipeBookAppComponent]
