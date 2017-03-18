@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
-import { ReactiveFormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { RecipeBookAppComponent } from "./recipe-book.component";
@@ -16,23 +15,18 @@ import { ShoppingListService } from "./shopping-list/shopping-list.service";
 import { RecipeService } from "./recipes/recipe.service";
 import { routing } from "./app.routing";
 import { ShoppingListModule } from './shopping-list/shopping-list.module';
+import { HomeComponent } from './home.component';
 
 @NgModule({
   declarations: [
     RecipeBookAppComponent,
     HeaderComponent,
     DropdownDirective,
-    RecipesComponent,
-    RecipeListComponent,
-    RecipeDetailComponent,
-    RecipeEditComponent,
-    RecipeItemComponent,
-    RecipeStartComponent
+    HomeComponent
   ],
   imports: [
     BrowserModule,
     HttpModule,
-    ReactiveFormsModule,
     routing,
     ShoppingListModule
   ],
